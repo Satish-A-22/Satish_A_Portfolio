@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satish-Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgb(0, 0, 33);
+        color: white;
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+      }
+
+      /* Add the following styles after the existing styles */
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(18, 18, 62);
+        padding: 20px 20px; /* Updated padding to increase the height */
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin: 0 25px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        transition: color 0.3s;
+        padding: 10px;
+        border-radius: 5px;
+      }
+
+      nav ul li a:hover {
+        color: rgb(156, 111, 207);
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      /* Add a media query for responsiveness */
+
+      @media screen and (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        nav ul {
+          margin-top: 10px;
+        }
+
+        nav ul li {
+          margin: 10px 0;
+        }
+      }
+
+      main hr {
+        border: 0;
+        background-color: #9c97f1;
+        height: 1.2px;
+        margin: 60px 10%;
+      }
+
+      .left {
+        font-size: 1.2rem;
+      }
+
+      .firstSection {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        margin: 130px 0;
+      }
+
+      .firstSection > div {
+        width: 100%;
+        max-width: 400px;
+        text-align: center;
+      }
+
+      .leftSection {
+        font-size: 2.8rem;
+      }
+
+      .leftSection .buttons {
+        padding: 30px 0;
+      }
+
+      .leftSection .btn {
+        padding: 12px;
+
+        color: white;
+        border: 2px solid white;
+        border-radius: 6px;
+        font-size: 20px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .leftSection .btn:hover {
+        background: #3a3c8b;
+      }
+
+      .rightSection img {
+        width: 100%;
+        max-width: 900rem;
+        height: 25rem;
+        border: 2px solid white;
+        border-radius: 8px;
+      }
+
+      .purple {
+        color: rgb(170, 107, 228);
+      }
+
+      #element {
+        color: rgb(170, 107, 228);
+      }
+
+      .text-gray {
+        color: gray;
+      }
+      .secondSection {
+        width: 100%;
+        max-width: 80vw;
+        margin: auto;
+        padding: 20px 10% 40px; /* Adjusted padding */
+      }
+      .academic {
+        width: 100%;
+        max-width: 80vw;
+        margin: auto;
+        padding: 20px 10% 40px; /* Adjusted padding */
+      }
+
+      .secondSection h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: left; /* Align the heading to the left */
+      }
+      .academic h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: left; /* Align the heading to the left */
+      }
+
+      .box {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-around; /* Adjusted alignment */
+      }
+
+      .vertical {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /* Align items to the left */
+      }
+
+      .vertical img {
+        width: 100%; /* Adjusted image width */
+        max-width: 200px; /* Set a maximum width for the image */
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 15px; /* Added margin to the image */
+      }
+
+      .vertical-title {
+        margin-top: 15px;
+        font-size: 1rem;
+        font-weight: bold;
+      }
+
+      .vertical-desc {
+        margin-top: 5px;
+        color: gray;
+        font-size: 0.8rem;
+        text-align: center;
+      }
+
+      /* Add the following styles for the footer after the existing styles */
+
+      footer {
+        background-color: #0e0e1a;
+        color: #ccc;
+        padding: 20px 10%;
+        text-align: center;
+      }
+
+      .footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-around;
+      }
+
+      .footer div {
+        flex: 1;
+        max-width: 250px;
+      }
+
+      .footer h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+
+      .footer ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer li {
+        margin-bottom: 8px;
+      }
+
+      .footer a {
+        text-decoration: none;
+        color: #ccc;
+        transition: color 0.3s;
+      }
+
+      .footer a:hover {
+        color: #9c97f1;
+      }
+
+      .footer-right {
+        flex: 1;
+        padding: 20px 0;
+      }
+
+      .footer-right p {
+        margin-top: 10px;
+      }
+
+      .project-image {
+        width: 100%; /* Set a consistent width, adjust as needed */
+        max-width: 200px; /* Set a maximum width for the image */
+        height: 15rem;
+        border-radius: 8px;
+        border: 2px solid black;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="left">Satish A Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a id="academic" href="#academic">Academic Projects</a></li>
+
+            <li><a id="projects" href="#projects">Intenship</a></li>
+            <li><a href="/contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="firstSection">
+        <div class="leftSection">
+          Hi, My name is <span class="purple">Satish A</span>
+
+          <div>and I am a passionate</div>
+          <span id="element"></span>
+          <div class="buttons">
+            <button class="btn">
+              <a href="Satish@cse-1.pdf">Download Resume</a>
+            </button>
+            <button class="btn">
+              <a href="https://github.com/Satish-A-22/">Visit Github</a>
+            </button>
+          </div>
+        </div>
+        <div class="rightSection">
+          <img src="one.png" id="img" alt="" />
+          <script>
+            // JavaScript code to change the image dynamically
+            var projectImage = document.getElementById("img");
+            var imageIndex = 0; // Initial image index
+            var imageArray = ["one.png", "two.png", "three.png", "four.png"]; // Add additional image URLs as needed
+
+            // Function to change the image
+            function changeImage() {
+              projectImage.src = imageArray[imageIndex];
+              imageIndex = (imageIndex + 1) % imageArray.length; // Loop through images
+            }
+
+            // Set an interval to change the image every 3 seconds (adjust as needed)
+            setInterval(changeImage, 2000);
+          </script>
+        </div>
+      </section>
+      <hr />
+      <section class="secondSection">
+        <span class="text-gray">What I have done so far</span>
+        <h1>Intenship</h1>
+
+        <div class="box">
+          <div class="vertical">
+            <img class="image-top project-image" src="pantech.png" alt="" />
+            <div class="vertical-title">Pantech-e-Solution</div>
+            <div class="vertical-desc">
+              During my internship at Pantech-e-Solution, I gained valuable
+              experience in artificial intelligence, data analytics, machine
+              learning, and Python programming. Engaging in hands-on projects, I
+              honed my skills and contributed to innovative solutions. This
+              experience enhanced my understanding of cutting-edge technologies
+              and their practical applications. I am eager to apply the
+              knowledge and expertise acquired at Pantech-e-Solution to future
+              challenges in the dynamic field of artificial intelligence and
+              data science.
+            </div>
+          </div>
+          <div class="vertical">
+            <img class="image-top project-image" src="varcon.png" alt="" />
+            <div class="vertical-title">Varcon Technologies</div>
+            <div class="vertical-desc">
+              My internship at Varcon Technology immersed me in machine
+              learning, focusing on a real-world project centered around disease
+              prediction based on symptoms. This hands-on experience equipped me
+              with practical skills in implementing machine learning algorithms
+              and addressing healthcare challenges. Working on the forefront of
+              technology and health, I honed my ability to translate theoretical
+              knowledge into impactful solutions. I am excited to leverage these
+              experiences in contributing to advancements at the intersection of
+              machine learning and healthcare.
+            </div>
+          </div>
+          <div class="vertical">
+            <img class="image-top project-image" src="Intenpe.png" alt="" />
+            <div class="vertical-title">Intenpe</div>
+            <div class="vertical-desc">
+              During my internship, I immersed myself in Core Java, gaining
+              comprehensive insights into its fundamental concepts and
+              applications. I undertook various projects, enhancing my
+              proficiency in Java programming, object-oriented design, and
+              problem-solving. This hands-on experience equipped me with the
+              skills needed to develop robust and efficient Java applications. I
+              am now well-prepared to apply my knowledge in diverse software
+              development scenarios and contribute effectively to Java-based
+              projects in the professional realm.
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section class="academic">
+        <span class="text-gray">What I have done so far</span>
+        <h1>ACADEMIC PROJECT</h1>
+
+        <div class="box">
+          <div class="vertical">
+            <img class="image-top project-image" src="php_mysql.png" alt="" />
+            <div class="vertical-title">Student NSB</div>
+            <div class="vertical-desc">
+              Student NSB offers a unified platform featuring VTU notes,
+              scholarship information, and bus pass applications on a single
+              website. Students can access comprehensive VTU notes, apply for
+              scholarships, and conveniently request bus passes through our
+              user-friendly website. Our primary goal is to provide a
+              centralized facility for students, enhancing their overall
+              experience. The website is developed using PHP, MySQL, HTML, CSS,
+              and JavaScript, ensuring a robust and interactive platform.
+            </div>
+          </div>
+          <div class="vertical">
+            <img class="image-top project-image" src="android.png" alt="" />
+            <div class="vertical-title">All_In_One_NSB</div>
+            <div class="vertical-desc">
+              This application serves as a comprehensive platform for VTU
+              students, offering features such as VTU notes, calculators,
+              scholarship application, and bus pass information. Students can
+              conveniently access educational resources and utilize tools for
+              their academic needs. Additionally, the app facilitates
+              communication with a built-in ChatGPT feature, providing a
+              versatile and helpful tool for students in various aspects of
+              their academic journey.
+            </div>
+          </div>
+          <div class="vertical">
+            <img class="image-top project-image" src="opengl.png" alt="" />
+            <div class="vertical-title">Basketball_Shoting</div>
+            <div class="vertical-desc">
+              The abstract introduces an OpenGL-based 3D basketball shooting
+              game implemented in C++. This cross-platform project employs
+              hardware-accelerated graphics rendering, utilizing a dedicated
+              GPU. Users can manipulate the 3D basketball court view with mouse
+              clicks and keyboard keys, allowing for dynamic angles. The player
+              interacts with the environment by shooting the ball into the
+              basket using specific keys, while also employing zoom features
+              along the x, y, and z axes.
+            </div>
+          </div>
+          <div class="vertical">
+            <img class="image-top project-image" src="arduino.png" alt="" />
+            <div class="vertical-title">
+              Smart Ambulance Detection In Traffic Signals Using Image
+              Processing
+            </div>
+            <div class="vertical-desc">
+              i-AVR is an IoT-based system tackling ambulance delays with a
+              portable healthcare unit and Android navigation. It calculates the
+              patient's criticality index, recommends the nearest healthcare
+              center, and ensures continuous vitals monitoring. The Android unit
+              suggests optimal routes based on vitals anomalies, showcasing
+              effective network performance. Our implementation includes an
+              Android app notifying traffic police, automatically adjusting
+              signals with Arduino and OpenCV, ensuring a swift response during
+              critical situations.
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="footer-first">
+          <h3>Satish A Developer Portfolio</h3>
+        </div>
+        <div class="footer-second">
+          <ul>
+            <li><a href="/#">Home</a></li>
+            <li><a href="/#">About</a></li>
+            <li><a href="/">Academic Project</a></li>
+            <li><a href="/">Projects</a></li>
+            <li><a href="/contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+        <div class="footer-third">
+          <ul>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/satish-python?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                >LinkedIn</a
+              >
+            </li>
+            <li><a href="https://github.com/Satish-A-22/">GitHub</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li>
+              <a
+                href="https://www.instragram.com/mr.satish02?igsh=NmR3cW9jcjBweHBw"
+                >Instagram</a
+              >
+            </li>
+            <li><a href="mailto:satisharumugam2001@gmail.com">Email</a></li>
+          </ul>
+        </div>
+        <div class="footer-fourth">
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="Satish@cse-1.pdf">Resume</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-right">
+        <p>&#169; 2024 www.satishfolio.com | All rights reserved</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "Web Developer",
+          "Python",
+          "Java",
+          "C++",
+          "C",
+          "Django",
+          "Flask",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "PHP",
+          "REACTJS",
+          "NEXTJS",
+          "GITHUB",
+        ],
+        typeSpeed: 80,
+      });
+    </script>
+    <!-- Replace the existing <script> tag with the following code -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Smooth scroll function
+        function smoothScroll(target, duration) {
+          var targetElement = document.querySelector(target);
+          var targetPosition = targetElement.offsetTop - 80; // Adjusted offset for navbar height
+          var startPosition = window.pageYOffset;
+          var distance = targetPosition - startPosition;
+          var startTime = null;
+
+          function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            var timeElapsed = currentTime - startTime;
+            var run = easeInOutQuad(
+              timeElapsed,
+              startPosition,
+              distance,
+              duration
+            );
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+          }
+
+          function easeInOutQuad(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return (c / 2) * t * t + b;
+            t--;
+            return (-c / 2) * (t * (t - 2) - 1) + b;
+          }
+
+          requestAnimationFrame(animation);
+        }
+
+        // Event listener for clicking on the "Projects" link
+        var projectsLink = document.querySelector(
+          'nav ul li a[href="#projects"]'
+        );
+        projectsLink.addEventListener("click", function (e) {
+          e.preventDefault();
+          smoothScroll(".secondSection", 1000); // Adjust the duration as needed
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Smooth scroll function
+        function smoothScroll(target, duration) {
+          var targetElement = document.querySelector(target);
+          var targetPosition = targetElement.offsetTop - 80; // Adjusted offset for navbar height
+          var startPosition = window.pageYOffset;
+          var distance = targetPosition - startPosition;
+          var startTime = null;
+
+          function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            var timeElapsed = currentTime - startTime;
+            var run = easeInOutQuad(
+              timeElapsed,
+              startPosition,
+              distance,
+              duration
+            );
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+          }
+
+          function easeInOutQuad(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return (c / 2) * t * t + b;
+            t--;
+            return (-c / 2) * (t * (t - 2) - 1) + b;
+          }
+
+          requestAnimationFrame(animation);
+        }
+
+        // Event listener for clicking on the "Academic Projects" link
+        var academicProjectsLink = document.querySelector(
+          'nav ul li a[href="#academic"]'
+        );
+        academicProjectsLink.addEventListener("click", function (e) {
+          e.preventDefault();
+          smoothScroll(".academic", 1000); // Adjust the duration as needed
+        });
+      });
+    </script>
+  </body>
+</html>
